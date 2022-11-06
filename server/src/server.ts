@@ -37,7 +37,7 @@ async function bootstrap(){
         return reply.status(200).send({count})
     })
 
-    fastify.get('/guess/count', async(request, reply)=>{
+    fastify.get('/guesses/count', async(request, reply)=>{
         const count = await prismaClient.guess.count()
         return reply.status(200).send({count})
     })
